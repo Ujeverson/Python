@@ -15,4 +15,4 @@ while continua:
             numero = random.randint(1, facesDado)
             print("Você jogou o dado e a face de cima é o:", numero)
 
-print("Você guardou os dados!")
+print("Agora você guardou os dados!")
