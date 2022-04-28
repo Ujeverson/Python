@@ -18,6 +18,7 @@ def gerarfaces(facesDado):
     print("\nA média dos números é", statistics.mean(lista))
     print("\nA mediana é", statistics.median(lista))
     print("\nA moda é", statistics.mode(lista))
+    print("\nA variancia é", statistics.pstdev(lista))
     
 
 while continua:
