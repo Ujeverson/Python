@@ -12,6 +12,7 @@ def gerarfaces(facesDado):
         lista.append(numero)
         print("\n Você jogou o dado",i+1, "e a face de cima é o:", numero)
     
+    #estatística dos números gerados
     print("\nA soma das faces 'para cima' é", sum(lista))
     print("\nA face com maior valor é", max(lista))
     print("\nA média dos números é", statistics.mean(lista))
