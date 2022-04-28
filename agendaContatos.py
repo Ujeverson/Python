@@ -1,22 +1,21 @@
 #Função que cria contatos
-import email
+def criarContato():
+    print("\nDigite as informações do contato")
+    pessoa = input("Nome: ")
+    mail = input("e-mail: ")
+    tel = input("telefone: ")
+    return pessoa, mail, tel
 
-
-def criacontato():
-    print("Digite as informações do contato")
-    nome = input("Nome: ")
-    email = input("e-mail: ")
-    telefone = input("telefone: ")
+#função que cria e salva os dados como arquivo .csv
+def salvarContato(pessoa, mail, tel):
+    arquivo = open('contatos.csv', 'w')
+    arquivo.write('{}{}{}{}' .format(pessoa, mail, tel, '\n'))
+    arquivo.flush()
+    arquivo.close()
     
-    return nome, email, telefone
+p, e, t = criarContato()
 
-nome, email, telefone = acriacontato()
-
-#criar e salva os dados como arquivo .csv
-contatos = open('contatos.csv','w')
-contatos.write('%s,%s,%s' % (nome, email, telefone))
-contatos.flush()
-contatos.close()
+salvarContato(pessoa=p,mail=e,tel=t)
 
 
 
