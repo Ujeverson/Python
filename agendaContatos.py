@@ -1,3 +1,5 @@
+import csv
+
 #Função que cria contatos
 def criarContato():
     print("\nDigite as informações do contato")
@@ -8,8 +10,8 @@ def criarContato():
 
 #função que cria e salva os dados como arquivo .csv
 def salvarContato(pessoa, mail, tel):
-    arquivo = open('contatos.csv', 'w')
-    arquivo.write('{}{}{}{}' .format(pessoa, mail, tel, '\n'))
+    arquivo = open('contatos.csv', 'a')   #'a' escreve os dados ao final da linha, o 'w' sobrescreve
+    arquivo.write('{}{}{}\n' .format(pessoa, mail, tel)) #\n para pular uma linha 
     arquivo.flush()
     arquivo.close()
     
